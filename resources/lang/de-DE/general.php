@@ -2,6 +2,7 @@
 
 return [
 
+    'dashboards'            => 'Dashboard|Dashboards',
     'items'                 => 'Artikel|Artikel',
     'incomes'               => 'Einkommen|Einkommen',
     'invoices'              => 'Rechnung|Rechnungen',
@@ -40,8 +41,16 @@ return [
     'others'                => 'Andere|Andere',
     'contacts'              => 'Kontakt|Kontakte',
     'reconciliations'       => 'Kontenabgleich|Kontenabgleiche',
+    'developers'            => 'Entwickler|Entwickler',
+    'schedules'             => 'Zeitplan|Zeitpläne',
+    'groups'                => 'Gruppe|Gruppen',
+    'charts'                => 'Diagramm|Diagramme',
+    'localisations'         => 'Lokalisierung|Lokalisierungen',
+    'defaults'              => 'Standardwert|Standardwerte',
+    'widgets'               => 'Widget|Widgets',
 
     'dashboard'             => 'Dashboard',
+    'welcome'               => 'Willkommen',
     'banking'               => 'Bankwesen',
     'general'               => 'Allgemein',
     'no_records'            => 'Keine Einträge.',
@@ -53,6 +62,7 @@ return [
     'no'                    => 'Nein',
     'na'                    => 'N/V',
     'daily'                 => 'Täglich',
+    'weekly'                => 'Wöchentlich',
     'monthly'               => 'Monatlich',
     'quarterly'             => 'Vierteljährlich',
     'yearly'                => 'Jährlich',
@@ -79,9 +89,11 @@ return [
     'reference'             => 'Referenz',
     'attachment'            => 'Anhang',
     'change'                => 'Ändern',
+    'change_type'           => 'Change :type',
     'switch'                => 'Wechseln',
     'color'                 => 'Farbe',
     'save'                  => 'Speichern',
+    'confirm'               => 'Bestätigen',
     'cancel'                => 'Abbrechen',
     'loading'               => 'Wird geladen...',
     'from'                  => 'Von',
@@ -114,17 +126,27 @@ return [
     'go_to'                 => 'Gehe zu :name',
     'created_date'          => 'Erstellungsdatum',
     'period'                => 'Zeitraum',
+    'frequency'             => 'Häufigkeit',
     'start'                 => 'Start',
     'end'                   => 'Ende',
     'clear'                 => 'Löschen',
     'difference'            => 'Differenz',
+    'footer'                => 'Fußzeile',
+    'start_date'            => 'Startdatum',
+    'basis'                 => 'Basis',
+    'accrual'               => 'Rückstellung',
+    'cash'                  => 'Bar',
+    'group_by'              => 'Gruppieren nach',
+    'accounting'            => 'Buchhaltung',
 
     'title' => [
         'new'               => 'Neu :type',
         'edit'              => ':type bearbeiten',
+        'delete'            => ':type löschen',
         'create'            => ':type erstellen',
         'send'              => ':type versendet',
         'get'               => ':type werden',
+        'add'               => ':type hinzufügen',
     ],
 
     'form' => [
@@ -133,6 +155,7 @@ return [
             'field'         => '- :field auswählen -',
             'file'          => 'Datei auswählen',
         ],
+        'add_new'           => ':field neu hinzufügen',
         'no_file_selected'  => 'Keine Datei ausgewählt...',
     ],
 
@@ -143,4 +166,16 @@ return [
         'this_month' => 'Dieser Monat',
         'last_month' => 'Letzter Monat',
     ],
+
+    'empty' => [
+        'documentation' => 'Weitere Details finden Sie in der <a href=":url" target="_blank" class="text-success">Dokumentation</a>.',
+        'items' => 'Artikel können Produkte oder Dienstleistungen sein. Sie können Artikel bei der Erstellung von Rechnungen verwenden, um den Preis, die Steuerfelder usw. zu füllen.',
+        'invoices' => 'Rechnungen können einmal oder wiederkehrend sein. Sie können die Rechnungen an Kunden senden und Online-Zahlungen anzunehmen.',
+        'revenues' => 'Revenue is a paid income transaction. It can be an independent record (i.e. deposit) or attached to an invoice.',
+        'customers' => 'Customers are required if you want to create invoices. They may also log in to Client Portal and see their balance.',
+        'bills' => 'Rechnungen können einmal oder wiederkehrend sein. Sie geben an, was Sie Ihren Händlern für die Produkte oder Dienstleistungen schulden, die Sie kaufen.',
+        'payments' => 'Payment is a paid expense transaction. It can be an independent record (i.e. food receipt) or attached to a bill.',
+        'vendors' => 'Vendors are required if you want to create bills. You can see the balance you owe and filter reports by the vendor.',
+    ],
+
 ];

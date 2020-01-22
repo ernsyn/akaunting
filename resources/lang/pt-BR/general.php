@@ -2,6 +2,7 @@
 
 return [
 
+    'dashboards'            => 'Painéis | Painéis',
     'items'                 => 'Item | Itens',
     'incomes'               => 'Renda|Rendas',
     'invoices'              => 'Fatura|Faturas',
@@ -40,8 +41,16 @@ return [
     'others'                => 'Outro | Outros',
     'contacts'              => 'Contato|Contatos',
     'reconciliations'       => 'Reconciliação|Reconciliações',
+    'developers'            => 'Desenvolvedor|Desenvolvedores',
+    'schedules'             => 'Agendar|Agendamentos',
+    'groups'                => 'Grupo|Grupos',
+    'charts'                => 'Gráfico|Gráficos',
+    'localisations'         => 'Idioma|Idiomas',
+    'defaults'              => 'Padrão|Padrões',
+    'widgets'               => 'Widget|Widgets',
 
     'dashboard'             => 'Painel',
+    'welcome'               => 'Bem-vindo',
     'banking'               => 'Banco',
     'general'               => 'Geral',
     'no_records'            => 'Sem registros.',
@@ -53,6 +62,7 @@ return [
     'no'                    => 'Não',
     'na'                    => 'N/A',
     'daily'                 => 'Diariamente',
+    'weekly'                => 'Semanal',
     'monthly'               => 'Mensal',
     'quarterly'             => 'Trimestral',
     'yearly'                => 'Anual',
@@ -79,9 +89,11 @@ return [
     'reference'             => 'Referência',
     'attachment'            => 'Anexo',
     'change'                => 'Alterar',
+    'change_type'           => 'Change :type',
     'switch'                => 'Trocar',
     'color'                 => 'Cor',
     'save'                  => 'Salvar',
+    'confirm'               => 'Confirmar',
     'cancel'                => 'Cancelar',
     'loading'               => 'Carregando...',
     'from'                  => 'De',
@@ -114,17 +126,27 @@ return [
     'go_to'                 => 'Ir para :name',
     'created_date'          => 'Data de Criação',
     'period'                => 'Período',
+    'frequency'             => 'Frequência',
     'start'                 => 'Começar',
     'end'                   => 'Finalizar',
     'clear'                 => 'Limpar',
     'difference'            => 'Diferença',
+    'footer'                => 'Rodapé',
+    'start_date'            => 'Data Inicial',
+    'basis'                 => 'Base',
+    'accrual'               => 'Provisão',
+    'cash'                  => 'Dinheiro',
+    'group_by'              => 'Agrupar por',
+    'accounting'            => 'Conta',
 
     'title' => [
         'new'               => 'Novo :type',
         'edit'              => 'Editar :type',
+        'delete'            => 'Excluir :type',
         'create'            => 'Criar :type',
         'send'              => 'Enviar :type',
         'get'               => 'Pegar :type',
+        'add'               => 'Adicionar :type',
     ],
 
     'form' => [
@@ -133,6 +155,7 @@ return [
             'field'         => '- Selecionar :field -',
             'file'          => 'Selecionar Arquivo',
         ],
+        'add_new'           => 'Adicionar novo :field',
         'no_file_selected'  => 'Nenhum arquivo selecionado...',
     ],
 
@@ -143,4 +166,16 @@ return [
         'this_month' => 'Este mês',
         'last_month' => 'Mês Passado',
     ],
+
+    'empty' => [
+        'documentation' => 'Confira a <a href=":url" target="_blank" class="text-success">documentação</a> para mais detalhes.',
+        'items' => 'Os itens podem ser produtos ou serviços. Você pode usar itens ao criar faturas e faturas para ter o preço, campos de impostos e etc preenchidos.',
+        'invoices' => 'Faturas podem ser únicas ou recorrentes. Você pode enviá-las para clientes e começar a aceitar pagamentos on-line.',
+        'revenues' => 'Receita é uma transação de renda paga. Ela pode ser um registro independente (ex: depósito) ou anexada a uma fatura.',
+        'customers' => 'Os clientes são necessários se você quiser criar faturas. Eles também podem fazer login no Portal do Cliente e ver seu saldo.',
+        'bills' => 'Faturas podem ser únicas ou recorrentes. Elas indicam o que você deve aos seus fornecedores pelos produtos ou serviços que você compra.',
+        'payments' => 'Pagamento é uma transação de despesa paga. Pode ser um registro independente (ex: receita alimentar) ou ligado a uma fatura.',
+        'vendors' => 'Fornecedores são necessários se você quiser criar faturas. Você pode ver o saldo que deve e filtrar relatórios pelo fornecedor.',
+    ],
+
 ];

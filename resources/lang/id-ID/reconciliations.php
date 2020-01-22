@@ -2,13 +2,15 @@
 
 return [
 
-    'reconcile'             => 'Reconcile',
-    'reconciled'            => 'Reconciled',
+    'reconcile'             => 'Rekonsiliasi',
+    'reconciled'            => 'Terekonsiliasi',
     'closing_balance'       => 'Saldo Akhir',
-    'unreconciled'          => 'Unreconciled',
-    'list_transactions'     => 'List Transactions',
-    'start_date'            => 'Start Date',
-    'end_date'              => 'End Date',
-    'cleared_amount'        => 'Cleared Amount',
+    'unreconciled'          => 'Tidak Terekonsiliasi',
+    'transactions'          => 'Transactions',
+    'start_date'            => 'Tanggal Mulai',
+    'end_date'              => 'Tanggal Berakhir',
+    'cleared_amount'        => 'Jumlah yang dihapus',
+    'deposit'               => 'Deposit',
+    'withdrawal'            => 'Penarikan',
 
 ];

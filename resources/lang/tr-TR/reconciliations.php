@@ -6,10 +6,10 @@ return [
     'reconciled'            => 'Mutabakat Yapıldı',
     'closing_balance'       => 'Kapanış Bakiyesi',
     'unreconciled'          => 'Mutabakat Sağlanmamış',
-    'list_transactions'     => 'İşlemleri Listele',
+    'transactions'          => 'İşlemler',
     'start_date'            => 'Başlangıç Tarihi',
     'end_date'              => 'Bitiş Tarihi',
-    'cleared_amount'        => 'MiktarıTemizle',
+    'cleared_amount'        => 'Temizlenen Tutar',
     'deposit'               => 'Yatırılan',
     'withdrawal'            => 'Çekilen',
 

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Modals;
 
-use App\Http\Controllers\Controller;
+use App\Abstracts\Http\Controller;
 use App\Http\Requests\Setting\Tax as Request;
 use App\Models\Setting\Tax;
 
@@ -33,7 +33,15 @@ class Taxes extends Controller
             'compound' => trans('taxes.compound'),
         ];
 
-        $html = view('modals.taxes.create', compact('types'))->render();
+        $tax_selector = false;
+
+        if (request()->has('tax_selector')) {
+            $tax_selector = request()->get('tax_selector');
+        }
+
+        $rand = rand();
+
+        $html = view('modals.taxes.create', compact('types', 'tax_selector', 'rand'))->render();
 
         return response()->json([
             'success' => true,

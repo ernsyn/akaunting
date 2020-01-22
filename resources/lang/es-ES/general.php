@@ -2,6 +2,7 @@
 
 return [
 
+    'dashboards'            => 'Tablero|Tableros',
     'items'                 => 'Artículo|Artículos',
     'incomes'               => 'Ingresos|Ingresos',
     'invoices'              => 'Factura|Facturas',
@@ -39,11 +40,17 @@ return [
     'statuses'              => 'Estado|Estados',
     'others'                => 'Otro|Otros',
     'contacts'              => 'Contacto|Contactos',
-    'reconciliations'       => 'Conciliación|Concialiaciones',
-    'deposits'              => 'Depósito|Depósitos',
-    'withdrawals'           => 'Retiro|Retiros',
+    'reconciliations'       => 'Conciliación|Conciliaciones',
+    'developers'            => 'Desarrollador | Desarrolladores',
+    'schedules'             => 'Horario|Horarios',
+    'groups'                => 'Grupo|Grupos',
+    'charts'                => 'Gráfico|Gráficos',
+    'localisations'         => 'Localización|Localizaciones',
+    'defaults'              => 'Por defecto|Por defecto',
+    'widgets'               => 'Widget|Widgets',
 
     'dashboard'             => 'Panel de Control',
+    'welcome'               => 'Te damos la bienvenida',
     'banking'               => 'Banking',
     'general'               => 'General',
     'no_records'            => 'No hay registros.',
@@ -55,6 +62,7 @@ return [
     'no'                    => 'No',
     'na'                    => 'N/D',
     'daily'                 => 'Diario',
+    'weekly'                => 'Semanalmente',
     'monthly'               => 'Mensual',
     'quarterly'             => 'Trimestral',
     'yearly'                => 'Anual',
@@ -81,9 +89,11 @@ return [
     'reference'             => 'Referencia',
     'attachment'            => 'Adjunto',
     'change'                => 'Cambiar',
+    'change_type'           => 'Cambiar :type',
     'switch'                => 'Cambiar',
     'color'                 => 'Color',
     'save'                  => 'Guardar',
+    'confirm'               => 'Confirmar',
     'cancel'                => 'Cancelar',
     'loading'               => 'Cargando...',
     'from'                  => 'De 	',
@@ -116,17 +126,27 @@ return [
     'go_to'                 => 'Ir a :name',
     'created_date'          => 'Fecha de Creación',
     'period'                => 'Período',
+    'frequency'             => 'Frecuencia',
     'start'                 => 'Inicio',
     'end'                   => 'Fin',
     'clear'                 => 'Limpiar',
     'difference'            => 'Diferencia',
+    'footer'                => 'Pie de página',
+    'start_date'            => 'Fecha de Inicio',
+    'basis'                 => 'Base',
+    'accrual'               => 'Acumulado',
+    'cash'                  => 'Efectivo',
+    'group_by'              => 'Agrupar por',
+    'accounting'            => 'Contabilidad',
 
     'title' => [
         'new'               => 'Nuevo :type',
         'edit'              => 'Editar :type',
+        'delete'            => 'Eliminar :type',
         'create'            => 'Crear :type',
         'send'              => 'Enviar :type',
         'get'               => 'Obtener :type',
+        'add'               => 'Agregar :type',
     ],
 
     'form' => [
@@ -135,6 +155,7 @@ return [
             'field'         => '- Seleccione :field -',
             'file'          => 'Seleccionar archivo',
         ],
+        'add_new'           => 'Agregar Nuevo :field',
         'no_file_selected'  => 'Ningún archivo seleccionado...',
     ],
 
@@ -145,4 +166,16 @@ return [
         'this_month' => 'Este mes',
         'last_month' => 'Mes anterior',
     ],
+
+    'empty' => [
+        'documentation' => 'Revisa la <a href=":url" target="_blank" class="text-success">documentación</a> para más detalles.',
+        'items' => 'Los artículos pueden ser productos o servicios. Puede utilizar artículos al crear facturas y recibos para poblar los campos precio, impuestos, etc.',
+        'invoices' => 'Las facturas pueden ser una vez o recurrentes. Puedes enviarlas a los clientes y empezar a aceptar pagos en línea.',
+        'revenues' => 'El ingreso es una transacción de ingreso de pago. Puede ser un registro independiente (es decir, depósito) o adjunto a una factura.',
+        'customers' => 'Los clientes son requeridos si desea crear facturas. También pueden iniciar sesión en el Portal del Cliente y ver su balance de saldo.',
+        'bills' => 'Los recibos pueden ser de una vez o recurrentes. Indican lo que debe a sus proveedores por los productos o servicios que compra.',
+        'payments' => 'El pago es una transacción de gasto pagado. Puede ser un registro independiente (es decir, recibo de alimento) o adjunto a un recibo.',
+        'vendors' => 'Los proveedores son necesarios si desea crear recibos. Puede ver el saldo que debe y filtrar los informes por proveedor.',
+    ],
+
 ];

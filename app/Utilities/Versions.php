@@ -6,7 +6,6 @@ use App\Traits\SiteApi;
 use Cache;
 use Date;
 use Parsedown;
-use GuzzleHttp\Exception\RequestException;
 
 class Versions
 {
@@ -43,7 +42,7 @@ class Versions
                 continue;
             }
 
-            $output .= '<h2><span class="label label-success">'.$release->tag_name.'</span></h2>';
+            $output .= '<h2><span class="badge badge-pill badge-success">' . $release->tag_name . '</span></h2>';
 
             $output .= $parsedown->text($release->body);
 
@@ -53,24 +52,23 @@ class Versions
         return $output;
     }
 
-    public static function latest($modules = array())
+    public static function latest($modules = [])
     {
         // Get data from cache
-        $data = Cache::get('versions');
+        $versions = Cache::get('versions');
 
-        if (!empty($data)) {
-            return $data;
+        if (!empty($versions)) {
+            return $versions;
         }
 
         $info = Info::all();
 
-        // No data in cache, grab them from remote
-        $data = array();
+        $versions = [];
 
         // Check core first
         $url = 'core/version/' . $info['akaunting'] . '/' . $info['php'] . '/' . $info['mysql'] . '/' . $info['companies'];
 
-        $data['core'] = static::getLatestVersion($url);
+        $versions['core'] = static::getLatestVersion($url, $info['akaunting']);
 
         // Then modules
         foreach ($modules as $module) {
@@ -79,40 +77,24 @@ class Versions
 
             $url = 'apps/' . $alias . '/version/' . $version . '/' . $info['akaunting'];
 
-            $data[$alias] = static::getLatestVersion($url);
+            $versions[$alias] = static::getLatestVersion($url, $version);
         }
 
-        Cache::put('versions', $data, Date::now()->addHour(6));
+        Cache::put('versions', $versions, Date::now()->addHour(6));
 
-        return $data;
+        return $versions;
     }
 
-    public static function getLatestVersion($url)
+    public static function getLatestVersion($url, $latest)
     {
-        $latest = '0.0.0';
-
-        $response = static::getRemote($url, ['timeout' => 10, 'referer' => true]);
-
-        // Exception
-        if ($response instanceof RequestException) {
+        if (!$data = static::getResponseData('GET', $url, ['timeout' => 10])) {
             return $latest;
         }
 
-        // Bad response
-        if (!$response || ($response->getStatusCode() != 200)) {
+        if (!is_object($data)) {
             return $latest;
         }
 
-        $content = json_decode($response->getBody());
-
-        // Empty response
-        if (!is_object($content) || !is_object($content->data)) {
-            return $latest;
-        }
-
-        // Get the latest version
-        $latest = $content->data->latest;
-
-        return $latest;
+        return $data->latest;
     }
 }

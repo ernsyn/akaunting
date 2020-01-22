@@ -4,19 +4,19 @@ return [
 
     'name'      =>  'Akaunting',
 
-    'code'      =>  'Reconciliation',
+    'code'      =>  'Argon',
 
-    'major'     =>  '1',
+    'major'     =>  '2',
 
-    'minor'     =>  '3',
+    'minor'     =>  '0',
 
-    'patch'     =>  '4',
+    'patch'     =>  '1',
 
     'build'     =>  '',
 
     'status'    =>  'Stable',
 
-    'date'      =>  '30-November-2018',
+    'date'      =>  '20-Nov-2019',
 
     'time'      =>  '18:30',
 

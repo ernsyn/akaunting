@@ -4,6 +4,7 @@ return [
 
     'previous'              => '&laquo; Anterior',
     'next'                  => 'Próximo &raquo;',
-    'showing'               => 'Mostrando :first de :last do :total :type',
+    'showing'               => ':first-:last of :total records.',
+    'page'                  => 'por página.',
 
 ];
